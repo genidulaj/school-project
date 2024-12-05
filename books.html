@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="books.html" class="active">Books</a></li>
+      <li><a href="borrowers.html">Borrowers</a></li>
+      <li><a href="transactions.html">Transactions</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+   
+      <h1>Search Books</h1>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <label for="searchInput">Search by Title:</label>
+        <input type="text" id="searchInput" placeholder="Enter book title..." />
+    </div>
+
+  
+
+    <h1>Books Management</h1>
+    <form id="bookForm">
+      <input type="hidden" id="bookIndex">
+      <label for="bookTitle">Title:</label>
+      <input type="text" id="bookTitle" placeholder="Enter book title" required>
+      <label for="bookAuthor">Author:</label>
+      <input type="text" id="bookAuthor" placeholder="Enter author name" required>
+      <label for="bookGenre">Genre:</label>
+      <input type="text" id="bookGenre" placeholder="Enter genre" required>
+      <label for="bookYear">Year:</label>
+      <input type="number" id="bookYear" placeholder="Enter publication year" required>
+      <button type="submit">Save Book</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Year</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="booksList"></tbody>
+    </table>
+  </main>
+
+  <script src="library.js"></script>
+</body>
+</html>

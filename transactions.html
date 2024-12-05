@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="borrowers.html">Borrowers</a></li>
+      <li><a href="transactions.html" class="active">Transactions</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Transactions</h1>
+    <form id="transactionForm">
+      <label for="transactionBorrower">Borrower:</label>
+      <select id="transactionBorrower" required></select>
+      <label for="transactionBook">Book:</label>
+      <select id="transactionBook" required></select>
+      <button type="submit">Record Borrowing</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Borrower</th>
+          <th>Book</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="transactionsList"></tbody>
+    </table>
+  </main>
+
+  <script src="library.js"></script>
+</body>
+</html>
